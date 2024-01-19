@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="76x76" href="static/assets/img/apple-icon.png" />
+    <link rel="icon" type="image/png" href="static/assets/img/favicon.png" />
+    <title>Soft UI Dashboard Tailwind</title>
+    <!-- Fonts and icons -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Nucleo Icons -->
+    <link href="static/assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="static/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Main Styling -->
+    <link href="static/assets/css/soft-ui-dashboard-tailwind.css?v=1.0.5" rel="stylesheet" />
+
+    <!-- Nepcha Analytics (nepcha.com) -->
+    <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+    <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+  </head>
+
+  <body class="m-0 font-sans antialiased font-normal bg-white text-start text-base leading-default text-slate-500">
+
+    <!-- Navbar -->
+    <nav class="absolute top-0 z-30 flex flex-wrap items-center justify-between w-full px-4 py-2 mt-6 mb-4 shadow-none lg:flex-nowrap lg:justify-start">
+      <div class="container flex items-center justify-between py-0 flex-wrap-inherit">
+        <p class="py-2.375 text-sm mr-4 ml-4 whitespace-nowrap font-bold text-white lg:ml-0" href=#"> Vilux Cleaning CRM</p>
+
+    </nav>
+
+    <main class="mt-0 transition-all duration-200 ease-soft-in-out">
+      <section class="min-h-screen mb-32">
+        <div class="relative flex items-start pt-12 pb-56 m-4 overflow-hidden bg-center bg-cover min-h-50-screen rounded-xl" style="background-image: url('static/assets/img/curved-images/curved14.jpg')">
+          <span class="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800 opacity-60"></span>
+          <div class="container z-10">
+            <div class="flex flex-wrap justify-center -mx-3">
+              <div class="w-full max-w-full px-3 mx-auto mt-0 text-center lg:flex-0 shrink-0 lg:w-5/12">
+                <h1 class="mt-12 mb-2 text-white">Welcome!</h1>
+                <p class="text-white">Take your first step to greatness</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="flex flex-wrap -mx-3 -mt-48 md:-mt-56 lg:-mt-48">
+            <div class="w-full max-w-full px-3 mx-auto mt-0 md:flex-0 shrink-0 md:w-7/12 lg:w-5/12 xl:w-4/12">
+              <div class="relative z-0 flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
+                <div class="p-6 mb-0 text-center bg-white border-b-0 rounded-t-2xl">
+                  <h5>Register with</h5>
+                </div>
+                <div class="flex-auto p-6">
+                  <form role="form text-left" method="POST" action="{{url_for('register')}}">
+                    <div class="flex mb-4">
+                      <div class="flex-1 mr-2">
+                          <input type="text" class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow" placeholder="Firstname" id="Firstname" name="Firstname" aria-label="Firstname" aria-describedby="fname-addon" />
+                      </div>
+                      <div class="flex-1 ml-2">
+                          <input type="text" class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow" placeholder="Lastname" id="Lastname" name="Lastname" aria-label="Lastname" aria-describedby="lname-addon" />
+                      </div>
+                  </div>
+                  
+                    <div class="mb-4">
+                      <input type="text" class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow" placeholder="Cellphone Number" id="Cellphone" name="Cellphone" aria-label="Cellphone" aria-describedby="cellphone-addon" />
+                    </div>
+                    <div class="mb-4">
+                      <input type="email" class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow" placeholder="Email" id="Email" name="Email" aria-label="Email" aria-describedby="email-addon" />
+                    </div>
+                    <div class="flex mb-4">
+                      <div class="flex-1 mr-2">
+                          <input type="password" class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow" placeholder="Password" id="Password" name="Password" aria-label="Password" aria-describedby="password-addon" />
+                      </div>
+                      <div class="flex-1 ml-2">
+                          <input type="password" class="text-sm focus:shadow-soft-primary-outline leading-5.6 ease-soft block w-full appearance-none rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 px-3 font-normal text-gray-700 transition-all focus:border-fuchsia-300 focus:bg-white focus:text-gray-700 focus:outline-none focus:transition-shadow" placeholder="Repeat Password" id="rPassword" name="rPassword" aria-label="RPassword" aria-describedby="Rpassword-addon" />
+                      </div>
+                  </div>
+                  
+                  <div class="text-center">
+                    <button type="submit" class="inline-block w-full px-6 py-3 mt-6 mb-0 font-bold text-center text-white uppercase align-middle transition-all bg-transparent border-0 rounded-lg cursor-pointer shadow-soft-md bg-x-25 bg-150 leading-pro text-xs ease-soft-in tracking-tight-soft bg-gradient-to-tl from-blue-600 to-cyan-400 hover:scale-102 hover:shadow-soft-xs active:opacity-85">
+                        Sign up
+                    </button>
+                </div>
+                  
+                    <p class="mt-4 mb-0 leading-normal text-sm">Already have an account? <a href="{{url_for('login')}}" class="font-bold text-slate-700">Sign in</a></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+      <!-- <footer class="py-12">
+        <div class="container">
+          <div class="flex flex-wrap -mx-3">
+            <div class="flex-shrink-0 w-full max-w-full mx-auto mb-6 text-center lg:flex-0 lg:w-8/12">
+              <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"> Company </a>
+              <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"> About Us </a>
+              <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"> Team </a>
+              <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"> Products </a>
+              <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"> Blog </a>
+              <a href="javascript:;" target="_blank" class="mb-2 mr-4 text-slate-400 sm:mb-0 xl:mr-12"> Pricing </a>
+            </div>
+            <div class="flex-shrink-0 w-full max-w-full mx-auto mt-2 mb-6 text-center lg:flex-0 lg:w-8/12">
+              <a href="javascript:;" target="_blank" class="mr-6 text-slate-400">
+                <span class="text-lg fab fa-dribbble"></span>
+              </a>
+              <a href="javascript:;" target="_blank" class="mr-6 text-slate-400">
+                <span class="text-lg fab fa-twitter"></span>
+              </a>
+              <a href="javascript:;" target="_blank" class="mr-6 text-slate-400">
+                <span class="text-lg fab fa-instagram"></span>
+              </a>
+              <a href="javascript:;" target="_blank" class="mr-6 text-slate-400">
+                <span class="text-lg fab fa-pinterest"></span>
+              </a>
+              <a href="javascript:;" target="_blank" class="mr-6 text-slate-400">
+                <span class="text-lg fab fa-github"></span>
+              </a>
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3">
+            <div class="w-8/12 max-w-full px-3 mx-auto mt-1 text-center flex-0">
+              <p class="mb-0 text-slate-400">
+                Copyright ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Soft by Creative Tim.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer> -->
+      <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+    </main>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.querySelector("form");
+  
+      form.addEventListener("submit", function (event) {
+        // Prevent the form from submitting by default
+        event.preventDefault();
+  
+        // Validate each input field
+        if (!validateFirstname() || !validateLastname() || !validateCellphone() || !validateEmail() || !validatePassword()) {
+          // Validation failed, do not submit the form
+          return;
+        }
+  
+        // If all validations pass, submit the form
+        form.submit();
+      });
+  
+      function validateFirstname() {
+        const firstname = document.getElementById("Firstname").value.trim();
+        if (firstname === "") {
+          alert("Please enter your firstname.");
+          return false;
+        }
+        return true;
+      }
+  
+      function validateLastname() {
+        const lastname = document.getElementById("Lastname").value.trim();
+        if (lastname === "") {
+          alert("Please enter your lastname.");
+          return false;
+        }
+        return true;
+      }
+  
+      function validateCellphone() {
+        const cellphone = document.getElementById("Cellphone").value.trim();
+        if (cellphone === "") {
+          alert("Please enter your cellphone number.");
+          return false;
+        }
+        // You can add more specific validation for the cellphone number if needed
+        return true;
+      }
+  
+      function validateEmail() {
+        const email = document.getElementById("Email").value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email === "" || !emailRegex.test(email)) {
+          alert("Please enter a valid email address.");
+          return false;
+        }
+        return true;
+      }
+  
+      function validatePassword() {
+        const password = document.getElementById("Password").value.trim();
+        const repeatPassword = document.getElementById("rPassword").value.trim();
+  
+        if (password === "") {
+          alert("Please enter a password.");
+          return false;
+        }
+  
+        // Assuming your existing code...
+        if (password.length < 8 || !(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/).test(password)) {
+          alert("Password must be at least 8 characters long and contain at least 1 lowercase, 1 uppercase, 1 number, and 1 special character.");
+          return false;
+        }
+
+  
+        if (password !== repeatPassword) {
+          alert("Passwords do not match.");
+          return false;
+        }
+  
+        return true;
+      }
+    });
+  </script>
+  <!-- plugin for scrollbar  -->
+  <script src="static/assets/js/plugins/perfect-scrollbar.min.js" async></script>
+  <!-- main script file  -->
+  <script src="static/assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5" async></script>
+</html>

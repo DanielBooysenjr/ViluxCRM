@@ -1,0 +1,64 @@
+### CRM SYSTEM - VILUX CLEANING ###
+
+### FLASK APP ###
+
+# User Login
+    # User Roles - Employees & Admins
+
+# Dashboard
+    # Analytics about, customers, leads, appointments, invoices etc
+
+# Leads
+    # Create, Edit & Delete Leads - DONE
+    # Convert Leads to Customers - DONE
+    # Track & Plot new Leads
+    # Search functionality
+
+# Customers
+    # Create, Edit & Delete Customers
+    # Track & Plot new Customers
+    # Search functionality
+    # Assign Customers
+
+# Generate Invoices
+    # Email/Whatsapp Invoices to Customers
+    # Download Invoices
+    # Edit Invoices
+    # Invoice & Tax Calculation
+
+# Manage Billing
+    # Track incomming payments - Yoco Integration
+    # Generate reports -  Daily, Monthly, Quarterly, Annually, Region
+
+# Manage Appointments - Google Calender Integration
+    # Create, Edit, Delete Appointments
+    # Notify Employees of new Appointments
+    # Avoid double bookings
+    # Assign employees to appointments
+
+# Expenses Tracking
+    # Track fuel, chemicals and salaries
+
+# Employees
+    # Generate payslips
+    # Email payslips
+    # Training center
+    # Contracts
+    # Appointment tracking and task management
+    # View their customers
+
+# Machine servicing
+    # Track when machines should go in for repairs/services using machine serial
+    # Add, Edit & Delete machine
+
+# Document portal
+    # Search functionality
+
+# Analytics & Reporting
+    # Generate reports on leads, customers, invoices and expenses
+
+# Customer Feedback
+    # Auto-send form when work is finished - I.E following day
+
+# Admin Portal
+    # Add employees, delete employees & edit employees

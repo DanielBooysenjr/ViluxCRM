@@ -1,0 +1,78 @@
+### INCOMPLETE LEADS ###
+
+CREATE TABLE Leads(
+    id INT auto_increment Primary Key,
+    name VARCHAR(20),
+    number VARCHAR(15),
+    email VARCHAR(30),
+    area VARCHAR(20),
+    amount VARCHAR(10),
+    status VARCHAR(20),
+    services VARCHAR(100),
+    comments TEXT,
+    subject VARCHAR(50),
+    message TEXT,
+    assigned VARCHAR(50),
+    lastcontacted VARCHAR(50),
+    nextappointment Date
+)
+
+
+### Customers ###
+
+CREATE TABLE Customers(
+    id INT auto_increment Primary Key,
+    name VARCHAR(20),
+    number VARCHAR(15),
+    email VARCHAR(30),
+    area VARCHAR(20),
+    amount VARCHAR(10),
+    services VARCHAR(100),
+    comments TEXT,
+    subject VARCHAR(50),
+    message TEXT
+)
+
+### Appointments ###
+
+CREATE TABLE Appointments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date DATE,
+    time VARCHAR(10),
+    services VARCHAR(100),
+    amount VARCHAR(200),
+    total DECIMAL(10, 2),
+    number VARCHAR(15),
+    customer VARCHAR(15),
+    town VARCHAR(20),
+    address VARCHAR(35)
+)
+
+### Employees ###
+
+CREATE TABLE Employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30),
+    address VARCHAR(40),
+    contact VARCHAR(15),
+    idnumber VARCHAR(20),
+    machine INT,
+    startdate date,
+    enddate date,
+    vechilereg VARCHAR(10)
+)
+
+
+CREATE TABLE LeadAppointments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    date DATE,
+    time VARCHAR(10),
+    services VARCHAR(100),
+    number VARCHAR(15),
+    customer VARCHAR(15),
+    town VARCHAR(20),
+    address VARCHAR(35),
+    status VARCHAR(30),
+    comments TEXT,
+    assigned VARCHAR(50)
+)

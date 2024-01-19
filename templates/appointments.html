@@ -1,0 +1,105 @@
+{% include 'base.html' %}
+{% include 'navbar.html' %}
+{% include "sidenav.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <link href="{{ url_for('static', filename='assets/css/calendar.css') }}" rel="stylesheet" />
+
+
+  <style>
+    /* Center-align the calendar container */
+    #calendar {
+      max-width: 90%;
+      margin: 0 auto; /* This will center-align the calendar */
+      padding-bottom: 5rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="calendar"></div>
+  <div id="tooltip-container" class="fc-popover border-gray-300 shadow p-2 rounded-md absolute"></div>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  var tooltipContainer = document.getElementById('tooltip-container'); // Reference to the tooltip container
+
+  var today = new Date(); // Get today's date
+  today.setHours(0, 0, 0, 0); // Set the time portion to 00:00:00.000 for accurate comparison
+
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    timeZone: 'GMT+2', // Set the timezone for the calendar (adjust this to your needs)
+
+    initialView: 'dayGridMonth',
+    events: [
+      {% for appointment in appointments %}
+        {
+          title: '{{ appointment[7] }} {{ appointment[2] }}',
+          start: '{{ appointment[1] }}',
+          end: '{{ appointment[1] }}',
+          location: 'Address: {{ appointment[8] }}',
+          time: 'Time: {{ appointment[2] }}',
+          services: 'Services: {{ appointment[3].replace('[', '').replace(']', '').replace('"', '') }}',
+          total: 'Total: R {{ appointment[5] }}',
+          // Add a custom CSS class based on the appointment date
+          className: new Date('{{ appointment[1] }}').getTime() < today.getTime() ? 'past-appointment' : new Date('{{ appointment[1] }}').getDate() === today.getDate() ? 'today-appointment' : 'future-appointment'
+        },
+      {% endfor %}
+
+      {% for lappointment in lead_appointments %}
+        {
+          title: '{{ lappointment[5] }}',
+          start: '{{ lappointment[1] }}',
+          status: 'Status: {{lappointment[8]}}',
+          end: '{{ lappointment[1] }}',
+          location: 'Address: {{ lappointment[7] }}',
+          time: 'Time: {{ lappointment[2] }}',
+          services: 'Services: {{ lappointment[10] }}',
+          // Add a custom CSS class based on the appointment date
+          className: new Date('{{ lappointment[1] }}').getTime() < today.getTime() ? 'lpast-appointment' : new Date('{{ lappointment[1] }}').getDate() === today.getDate() ? 'ltoday-appointment' : 'lfuture-appointment'
+        },
+      {% endfor %}
+    ],
+    eventMouseEnter: function(info) {
+      // Build the tooltip content with title, location, and additional detail
+      var tooltipContent = '<strong>' + info.event.title + '</strong>';
+      if (info.event.extendedProps.title) {
+        tooltipContent += '<br><em>' + info.event.extendedProps.title + '</em>';
+      }
+      if (info.event.extendedProps.status) {
+        tooltipContent += '<br>' + info.event.extendedProps.status;
+      }
+      if (info.event.extendedProps.location) {
+        tooltipContent += '<br>' + info.event.extendedProps.location;
+      }
+      if (info.event.extendedProps.time) {
+        tooltipContent += '<br>' + info.event.extendedProps.time;
+      }
+      if (info.event.extendedProps.services) {
+        tooltipContent += '<br>' + info.event.extendedProps.services;
+      }
+
+
+      // Show the tooltip and set its content
+      tooltipContainer.innerHTML = tooltipContent;
+      tooltipContainer.classList.remove('hidden');
+      tooltipContainer.style.left = (info.jsEvent.clientX - 280) + 'px';
+      tooltipContainer.style.top = (info.jsEvent.clientY + 30) + 'px';
+    },
+    eventMouseLeave: function(info) {
+      // Hide the tooltip
+      tooltipContainer.classList.add('hidden');
+    }
+  });
+
+  calendar.render();
+});
+
+  </script>
+</body>
+
+</html>
